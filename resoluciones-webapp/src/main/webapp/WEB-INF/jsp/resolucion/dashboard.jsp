@@ -20,10 +20,7 @@
 			<c:out value="Eliminar" />
 		</a>
 	</display:column>
-
-
-
-
+z
 </display:table>
 
 <br>

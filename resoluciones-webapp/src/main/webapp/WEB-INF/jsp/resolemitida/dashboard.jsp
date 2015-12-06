@@ -25,3 +25,6 @@
 	
 	
 </display:table>
+
+<br>
+<a class="btn btn-primary" href="../resolucion/nuevo">Agregar</a>

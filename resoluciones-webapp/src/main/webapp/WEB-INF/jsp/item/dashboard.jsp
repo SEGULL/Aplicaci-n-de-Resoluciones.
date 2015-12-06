@@ -19,8 +19,7 @@
 
 				</a>
 	</display:column>
-
-	
-	
-	
 </display:table>
+<br>
+<br>
+<a class="btn btn-primary" href="../item/nuevo">Agregar</a>

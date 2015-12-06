@@ -22,6 +22,7 @@
 				</a>
 	</display:column>
 	
-	
-	
 </display:table>
+
+<br>
+<a class="btn btn-primary" href="../itemresol/nuevo">Agregar</a>
