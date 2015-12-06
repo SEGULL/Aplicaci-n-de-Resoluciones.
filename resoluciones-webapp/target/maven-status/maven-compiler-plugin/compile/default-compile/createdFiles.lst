@@ -1,0 +1,10 @@
+pe\gob\edu\ugel\resoluciones\webapp\controller\DocenteController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\ResolucionController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\DetalleController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\ResolemitidaController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\ItemController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\HomeController.class
+pe\gob\edu\ugel\resoluciones\webapp\security\DAOAuthenticationProvider.class
+pe\gob\edu\ugel\resoluciones\webapp\security\SessionDetail.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\ItemresolController.class
+pe\gob\edu\ugel\resoluciones\webapp\controller\ReporteController.class

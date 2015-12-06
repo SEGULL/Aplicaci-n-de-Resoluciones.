@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.gob.edu.ugel.resoluciones.core.domain.Detalle"
+		table="detalle">
+		<id name="id" type="java.lang.Long">
+			<column name="IdDetalle" />
+			<generator class="identity" />
+		</id>
+
+
+		<property name="nominseducativa" type="string">
+			<column name="NomInsEducativa" length="100" />
+		</property>
+		<property name="lugarinstitucion" type="string">
+			<column name="LugarInstitucion" length="100" />
+		</property>
+		<property name="cargodesempeniar" type="string">
+			<column name="CargoDesempeniar" length="100" />
+		</property>
+		<property name="motvacante" type="string">
+			<column name="MotVacante" length="100" />
+		</property>
+		<property name="codplaza" type="string">
+			<column name="CodPlaza" length="100" />
+		</property>
+		<property name="vigenencargo" type="string">
+			<column name="VigenEncargo" length="100" />
+		</property>
+		<property name="cargoactual" type="string">
+			<column name="CargoActual" length="100" />
+		</property>
+
+		<many-to-one name="resolEmitida"
+			class="pe.gob.edu.ugel.resoluciones.core.domain.ResolEmitida" lazy="false"
+			fetch="select">
+			<column name="IdRes_Emi" />
+		</many-to-one>
+
+
+
+	</class>
+</hibernate-mapping>

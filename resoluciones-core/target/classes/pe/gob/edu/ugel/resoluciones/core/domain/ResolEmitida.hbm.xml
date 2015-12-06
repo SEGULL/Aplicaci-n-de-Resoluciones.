@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pe.gob.edu.ugel.resoluciones.core.domain.ResolEmitida" table="resolemitida" >
+        <id name="id" type="java.lang.Long">
+            <column name="IdRes_Emi" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="codresolucion" type="string">
+            <column name="CodResolucion" length="50" />
+        </property>
+        <property name="fechaemitida" type="date">
+            <column name="FechaEmitida" length="50" />
+        </property>
+         <many-to-one name="resolucion" class="pe.gob.edu.ugel.resoluciones.core.domain.Resolucion" lazy="false" fetch="select" >
+            <column name="IdResolucion" />
+        </many-to-one>
+        
+        <many-to-one name="docente" class="pe.gob.edu.ugel.resoluciones.core.domain.Docente" lazy="false" fetch="select" >
+            <column name="IdDocente" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pe.gob.edu.ugel.resoluciones.core.domain.Docente" table="docente" >
+        <id name="id" type="java.lang.Long">
+            <column name="IdDocente" />
+            <generator class="identity" />
+        </id>
+<!--         <version name="version" type="java.lang.Integer" > -->
+<!--             <column name="version" /> -->
+<!--         </version> -->
+        <property name="nombreReg" type="string">
+            <column name="NombreReg" length="100" />
+        </property>
+        <property name="nombreUnEje" type="string">
+            <column name="NombreUnEje" length="100" />
+        </property>
+		<property name="nombreOrInter" type="string">
+            <column name="NombreOrInter" length="100" />
+        </property>
+        <property name="provincia" type="string">
+            <column name="Provincia" length="50" />
+        </property>
+        <property name="distrito" type="string">
+            <column name="Distrito" length="50" />
+        </property>
+        <property name="tipoIE" type="string">
+            <column name="TipoIE" length="50" />
+        </property>
+        <property name="gestion" type="string">
+            <column name="Gestion" length="50" />
+        </property>
+        <property name="zona" type="string">
+            <column name="Zona" length="50" />
+        </property>
+        <property name="codModIE" type="string">
+            <column name="CodModIE" length="50" />
+        </property>
+        <property name="clave8" type="string">
+            <column name="Clave8" length="50" />
+        </property>
+        <property name="nivelEducativo" type="string">
+            <column name="NivelEducativo" length="50" />
+        </property>
+        <property name="nivelInsEduca" type="string">
+            <column name="NivelInsEduca" length="50" />
+        </property>
+        <property name="codPlaza" type="string">
+            <column name="CodPlaza" length="50" />
+        </property>
+         <property name="tipoTrabajador" type="string">
+            <column name="TipoTrabajador" length="50" />
+        </property>
+         <property name="subTipoTrabajador" type="string">
+            <column name="SubTipoTrabajador" length="50" />
+        </property>
+         <property name="cargo" type="string">
+            <column name="Cargo" length="50" />
+        </property>
+         <property name="situacionLab" type="string">
+            <column name="SituacionLab" length="50" />
+        </property>
+         <property name="motivoVac" type="string">
+            <column name="MotivoVac" length="50" />
+        </property>
+         <property name="apellidoPat" type="string">
+            <column name="ApellidoPat" length="100" />
+        </property>
+         <property name="apellidoMat" type="string">
+            <column name="ApellidoMat" length="100" />
+        </property>
+         <property name="nombres" type="string">
+            <column name="Nombres" length="100" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="Categoria" length="10" />
+        </property>
+        <property name="jornada" type="string">
+            <column name="Jornada" length="10" />
+        </property>
+        <property name="estado" type="string">
+            <column name="Estado" length="15" />
+        </property>
+        <property name="codigoModular" type="string">
+            <column name="CodigoModular" length="15" />
+        </property>
+        <property name="fechaNac" type="string">
+            <column name="FechaNac" length="15" />
+        </property>
+        <property name="dni" type="string">
+            <column name="Dni" length="8" />
+        </property>
+        <property name="fechaInicio" type="string">
+            <column name="FechaInicio" length="15" />
+        </property>
+        <property name="fechaTermino" type="string">
+            <column name="FechaTermino" length="15" />
+        </property>
+        <property name="tipoRegistro" type="string">
+            <column name="TipoRegistro" length="50" />
+        </property>
+        <property name="ley" type="string">
+            <column name="Ley" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

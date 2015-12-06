@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pe.gob.edu.ugel.resoluciones.core.domain.ItemResol" table="item_resol" >
+        <id name="id" type="java.lang.Long">
+            <column name="IdIntRels" />
+            <generator class="identity" />
+        </id>
+<!--         <version name="version" type="java.lang.Integer" > -->
+<!--             <column name="version" /> -->
+<!--         </version> -->
+
+		<many-to-one name="resolucion" class="pe.gob.edu.ugel.resoluciones.core.domain.Resolucion" lazy="false" fetch="select" >
+            <column name="IdResolucion" />
+        </many-to-one>
+        
+        <many-to-one name="item" class="pe.gob.edu.ugel.resoluciones.core.domain.Item" lazy="false" fetch="select" >
+            <column name="IdItem" />
+        </many-to-one>
+        <property name="campo" type="string">
+            <column name="Campo" length="100" />
+        </property>
+       
+    </class>
+</hibernate-mapping>
