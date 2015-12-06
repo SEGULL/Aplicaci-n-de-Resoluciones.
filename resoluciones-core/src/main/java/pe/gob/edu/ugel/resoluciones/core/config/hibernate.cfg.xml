@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Common -->
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/Docente.hbm.xml" />
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/Item.hbm.xml" /> 
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/Resolucion.hbm.xml" /> 
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/ResolEmitida.hbm.xml" /> 
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/Detalle.hbm.xml" />
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/ItemResol.hbm.xml" />
+	<mapping resource="pe/gob/edu/ugel/resoluciones/core/domain/Usuario.hbm.xml" />
+		 
+		
+
+	</session-factory>
+	
+</hibernate-configuration>

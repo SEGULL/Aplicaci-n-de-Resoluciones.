@@ -1,0 +1,29 @@
+package pe.gob.edu.ugel.resoluciones.webapp.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import pe.gob.edu.ugel.resoluciones.service.services.ResolucionServiceImpl;
+
+@Controller
+public class ItemController {
+	protected Log logger = LogFactory.getLog(getClass());
+
+	@Autowired
+	private ResolucionServiceImpl resolucionService;
+
+	@RequestMapping(value = "item/dashboard", method = RequestMethod.GET)
+	public String dashboard(Model model, HttpServletRequest request) {
+		logger.info("::::::::::::item/dashboard:::::::::::::::" + resolucionService);
+		model.addAttribute("listItem", resolucionService.ListarItem());
+		request.getSession().setAttribute("menuHeader", "item");
+		return "item/dashboard";
+	}
+
+}
