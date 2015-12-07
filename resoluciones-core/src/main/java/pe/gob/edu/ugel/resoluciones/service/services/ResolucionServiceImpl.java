@@ -170,7 +170,7 @@ public class ResolucionServiceImpl {
 	 * @param resolemitida
 	 */
 	public void GuardarItemResol(ItemResol itemresol) {
-		if (itemresol.getId() > 0) {
+		if (itemresol.getId() != null) {
 			this.resolocionDAO.updateItemResol(itemresol);
 		} else {
 			this.resolocionDAO.saveItemResol(itemresol);
