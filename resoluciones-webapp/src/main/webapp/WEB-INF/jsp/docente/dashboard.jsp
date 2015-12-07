@@ -18,8 +18,7 @@
 	<display:column title="Nombres" property="nombres" />
 	<display:column title="D.N.I." property="dni" />
 	<display:column title="accion">
-		<a href="resolemitida/dashboardemitirresolucions.jsp">Res. <%-- onclick="javascript:edit('<c:out value="${item.id}"></c:out>');--%>
-		</a>
+		<a href="${docente.id}/emitir-resolucion">Emit. Resol. </a>
 	</display:column>
 	<display:column title="accion">
 		<a href="#"
