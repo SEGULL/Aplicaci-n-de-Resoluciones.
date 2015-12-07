@@ -38,8 +38,6 @@ public class ResolucionController {
 		return "resolucion/form";
 	}
 
-	
-	
 	@RequestMapping(value = "resolucion/{id}", method = RequestMethod.GET)
 	public String getFormulario(@PathVariable String id, Model model) {
 		model.addAttribute("resolucion",
@@ -49,10 +47,10 @@ public class ResolucionController {
 
 	@RequestMapping(value = "resolucion/{id}/items", method = RequestMethod.GET)
 	public String getItems(@PathVariable String id, Model model) {
-		model.addAttribute("resolucion",
-				resolucionService.IdResolResolItem(Integer.parseInt(id)));
+		model.addAttribute("listItem",
+				resolucionService.ListarItemResol(new Long(id)));
 
-		return "resolucion/form";
+		return "resolucion/items";
 	}
 
 	@RequestMapping(value = "resolucion/guardar", method = RequestMethod.POST)
