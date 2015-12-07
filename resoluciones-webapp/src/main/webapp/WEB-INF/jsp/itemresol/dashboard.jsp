@@ -10,16 +10,8 @@
 
 
 	<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Editar"/>
-
-				</a>
-	</display:column>
-		<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Eliminar"/>
-
-				</a>
+		<a href="../itemresol/${itemResol.id}">Editar</a>
+		<a href="../itemresol/${itemResol.id}/eliminar">Eliminar</a>
 	</display:column>
 	
 </display:table>
