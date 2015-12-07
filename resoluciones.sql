@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2015 a las 19:25:33
+-- Tiempo de generación: 07-12-2015 a las 08:29:33
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -35,15 +35,18 @@ CREATE TABLE IF NOT EXISTS `detalle` (
   `MotVacante` varchar(100) DEFAULT NULL,
   `CodPlaza` varchar(100) DEFAULT NULL,
   `VigenEncargo` int(100) DEFAULT NULL,
-  `CargoActual` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+  `CargoActual` varchar(100) DEFAULT NULL,
+  `CargoDesempeniar` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `detalle`
 --
 
-INSERT INTO `detalle` (`IdDetalle`, `IdRes_Emi`, `NomInsEducativa`, `LugarInstitucion`, `CargoDesempeñar`, `MotVacante`, `CodPlaza`, `VigenEncargo`, `CargoActual`) VALUES
-(7, 4, 'IEPM. N° 70602 Churicanchi-caracoto', 'distrito de caracoto- PROVINCIA SAN ROMAN', 'DERECTOR (E) - 40 Horas N° Sec 6', 'Cese profesor Glicerio RAMOS ORDOÑO,RD. N° 1578-200-DUGEL-SR.', 'Cod de plaza 1166413814F3', 1, 'Profesor');
+INSERT INTO `detalle` (`IdDetalle`, `IdRes_Emi`, `NomInsEducativa`, `LugarInstitucion`, `CargoDesempeñar`, `MotVacante`, `CodPlaza`, `VigenEncargo`, `CargoActual`, `CargoDesempeniar`) VALUES
+(7, 4, 'IEPM. N° 70602 Churicanchi-caracoto', 'distrito de caracoto- PROVINCIA SAN ROMAN', 'DERECTOR (E) - 40 Horas N° Sec 6', 'Cese profesor Glicerio RAMOS ORDOÑO,RD. N° 1578-200-DUGEL-SR.', 'Cod de plaza 1166413814F3', 1, 'Profesor', NULL),
+(8, 31, 'asdasd', 'bkjbkj', NULL, 'kj', 'kjb', 0, 'bkjbkbjkj', 'kjb'),
+(9, 32, 'asdasd', 'bkjbkj', NULL, 'kj', 'kjb', 0, 'bkjbkbjkj', 'kjb');
 
 -- --------------------------------------------------------
 
@@ -132,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `item_resol` (
   `IdResolucion` int(11) NOT NULL,
   `IdItem` int(11) NOT NULL,
   `Campo` varchar(1000) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `item_resol`
@@ -160,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `resolemitida` (
   `IdResolucion` int(11) NOT NULL,
   `CodResolucion` varchar(50) NOT NULL,
   `FechaEmitida` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `resolemitida`
@@ -188,7 +191,14 @@ INSERT INTO `resolemitida` (`IdRes_Emi`, `IdDocente`, `IdResolucion`, `CodResolu
 (22, 3, 1, 'dsadadadasadadasdasdssasa', '2015-12-03'),
 (23, 3, 1, 'dsadadadasadadasdasdssasa', '2015-12-03'),
 (24, 3, 1, 'dsadadadasadadasdasdssasa', '2015-12-03'),
-(25, 3, 1, 'dsadadadasadadasdasdssasa', '2015-12-03');
+(25, 3, 1, 'dsadadadasadadasdasdssasa', '2015-12-03'),
+(26, 2, 5, '12334rsdf', '2015-12-11'),
+(27, 2, 5, '12334rsdf', '2015-12-11'),
+(28, 2, 5, '12334rsdf', '2015-12-11'),
+(29, 2, 5, '12334rsdf', '2015-12-11'),
+(30, 2, 5, '12334rsdf', '2015-12-11'),
+(31, 2, 1, '23423', '2015-12-17'),
+(32, 2, 5, '23423', '2015-12-17');
 
 -- --------------------------------------------------------
 
@@ -283,7 +293,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `detalle`
 --
 ALTER TABLE `detalle`
-MODIFY `IdDetalle` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `IdDetalle` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `docente`
 --
@@ -298,12 +308,12 @@ MODIFY `IdItem` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2515173;
 -- AUTO_INCREMENT de la tabla `item_resol`
 --
 ALTER TABLE `item_resol`
-MODIFY `IdIntRels` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `IdIntRels` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `resolemitida`
 --
 ALTER TABLE `resolemitida`
-MODIFY `IdRes_Emi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+MODIFY `IdRes_Emi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT de la tabla `resolucion`
 --

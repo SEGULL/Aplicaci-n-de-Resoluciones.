@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import pe.gob.edu.ugel.resoluciones.core.domain.ItemResol;
 import pe.gob.edu.ugel.resoluciones.core.domain.Resolucion;
 import pe.gob.edu.ugel.resoluciones.service.services.ResolucionServiceImpl;
 
@@ -49,8 +50,38 @@ public class ResolucionController {
 	public String getItems(@PathVariable String id, Model model) {
 		model.addAttribute("listItem",
 				resolucionService.ListarItemResol(new Long(id)));
-
+		model.addAttribute("idR", id);
 		return "resolucion/items";
+	}
+
+	@RequestMapping(value = "resolucion/{id}/items/nuevo", method = RequestMethod.GET)
+	public String getFormItemNuevo(@PathVariable String id, Model model) {
+		model.addAttribute("listItem", resolucionService.ListarItem());
+		model.addAttribute("itemResolucion", new ItemResol());
+
+		return "resolucion/form_item";
+	}
+
+	@RequestMapping(value = "resolucion/{id}/items/{idI}", method = RequestMethod.GET)
+	public String getFormItem(@PathVariable String id,
+			@PathVariable String idI, Model model) {
+		model.addAttribute("listItem", resolucionService.ListarItem());
+		model.addAttribute("itemResolucion",
+				resolucionService.getItemResolucion(new Long(idI)));
+
+		return "resolucion/form_item";
+	}
+
+	@RequestMapping(value = "resolucion/{idR}/items/guardar", method = RequestMethod.POST)
+	public String guardarFormItem(@PathVariable String idR,
+			@ModelAttribute("itemResolucion") ItemResol item, Model model) {
+		Resolucion r = new Resolucion();
+		r.setId(new Long(idR));
+		item.setResolucion(r);
+
+		resolucionService.GuardarItemResol(item);
+
+		return "redirect:/resolucion/" + idR + "/items";
 	}
 
 	@RequestMapping(value = "resolucion/guardar", method = RequestMethod.POST)

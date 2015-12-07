@@ -1,22 +1,18 @@
 package pe.gob.edu.ugel.resoluciones.core.dao;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 
-import pe.gob.edu.ugel.resoluciones.core.domain.BaseEntity;
-
-//import com.sun.xml.internal.stream.Entity;
-
-import pe.gob.edu.ugel.resoluciones.core.domain.Detalle;
 import pe.gob.edu.ugel.resoluciones.core.domain.Docente;
 import pe.gob.edu.ugel.resoluciones.core.domain.Item;
 import pe.gob.edu.ugel.resoluciones.core.domain.ItemResol;
 import pe.gob.edu.ugel.resoluciones.core.domain.ResolEmitida;
 import pe.gob.edu.ugel.resoluciones.core.domain.Resolucion;
+//import com.sun.xml.internal.stream.Entity;
+import pe.gob.edu.ugel.resoluciones.core.domain.Detalle;
 import pe.gob.edu.ugel.resoluciones.core.domain.Usuario;
 
 public class ResolucionDAOImpl extends BaseDAOHibernate implements
@@ -296,6 +292,14 @@ public class ResolucionDAOImpl extends BaseDAOHibernate implements
 	public List<ItemResol> findItemsByIdResolucion(Long id) {
 		return find(ItemResol.class, "FROM ItemResol where resolucion.id = "
 				+ id);
+	}
+
+	public ItemResol findItemResolucion(Long id) {
+		return findFirst(ItemResol.class, "FROM ItemResol where id = " + id);
+	}
+
+	public void updateItemResol(ItemResol itemresol) {
+		this.update(itemresol);
 	}
 
 }

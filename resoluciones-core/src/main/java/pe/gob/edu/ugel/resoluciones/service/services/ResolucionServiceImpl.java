@@ -170,7 +170,11 @@ public class ResolucionServiceImpl {
 	 * @param resolemitida
 	 */
 	public void GuardarItemResol(ItemResol itemresol) {
-		this.resolocionDAO.saveItemResol(itemresol);
+		if (itemresol.getId() > 0) {
+			this.resolocionDAO.updateItemResol(itemresol);
+		} else {
+			this.resolocionDAO.saveItemResol(itemresol);
+		}
 	}
 
 	// foranikey docente
@@ -238,6 +242,11 @@ public class ResolucionServiceImpl {
 
 	public List<ItemResol> ListarItemResol(Long id) {
 		return resolocionDAO.findItemsByIdResolucion(id);
+	}
+
+	public ItemResol getItemResolucion(Long id) {
+
+		return resolocionDAO.findItemResolucion(id);
 	}
 
 }

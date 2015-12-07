@@ -2,16 +2,13 @@ package pe.gob.edu.ugel.resoluciones.core.dao;
 
 import java.util.List;
 
-import pe.gob.edu.ugel.resoluciones.core.domain.BaseEntity;
-
-//import com.sun.xml.internal.stream.Entity;
-
-import pe.gob.edu.ugel.resoluciones.core.domain.Detalle;
 import pe.gob.edu.ugel.resoluciones.core.domain.Docente;
 import pe.gob.edu.ugel.resoluciones.core.domain.Item;
 import pe.gob.edu.ugel.resoluciones.core.domain.ItemResol;
 import pe.gob.edu.ugel.resoluciones.core.domain.ResolEmitida;
 import pe.gob.edu.ugel.resoluciones.core.domain.Resolucion;
+//import com.sun.xml.internal.stream.Entity;
+import pe.gob.edu.ugel.resoluciones.core.domain.Detalle;
 import pe.gob.edu.ugel.resoluciones.core.domain.Usuario;
 
 public interface ResolucionDAO {
@@ -165,5 +162,9 @@ public interface ResolucionDAO {
 	void updateItem(Item item);
 
 	List<ItemResol> findItemsByIdResolucion(Long id);
+
+	ItemResol findItemResolucion(Long id);
+
+	void updateItemResol(ItemResol itemresol);
 
 }
