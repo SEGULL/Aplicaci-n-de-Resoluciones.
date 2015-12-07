@@ -6,6 +6,7 @@
 	<display:column title="Nom. Docente" property="docente.nombres" />
 	<display:column title="DIN Docente" property="docente.dni" />
 	<display:column title="Nombre Resolucion" property="resolucion.nombre" />
+	<display:column title="Fecha Emitida" property="fechaemitida" />
 
 
 <display:column title="accion">
