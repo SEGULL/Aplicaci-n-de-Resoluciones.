@@ -48,9 +48,19 @@ public class ResolucionServiceImpl {
 	 * @param resolemitida
 	 */
 	public void GuardarItem(Item item) {
-		this.resolocionDAO.saveItem(item);// ojo
+		
+		if (item.getId() > 0) {
+			this.resolocionDAO.updateItem(item);
+		} else {
+			this.resolocionDAO.saveItem(item);
+		}
+		
+		
 	}
 
+	
+	
+	
 	/**
 	 * Borrar item
 	 * 

@@ -161,5 +161,6 @@ public interface ResolucionDAO {
 	List<Usuario> findAllUsuario();
 
 	void updateResolucion(Resolucion resss);
+	void updateItem(Item item);
 
 }

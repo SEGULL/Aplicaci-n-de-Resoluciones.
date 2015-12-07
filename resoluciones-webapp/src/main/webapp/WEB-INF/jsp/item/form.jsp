@@ -9,8 +9,9 @@
 				autofocus="autofocus" />
 			<label for="exampleInputEmail1">Tipo</label>
 			<form:input path="tipo" class="form-control" placeholder="Tipo"
-				autofocus="autofocus" />	
+				autofocus="autofocus"/>	
 		</div>
 		<button type="submit" class="btn btn-primary">Guardar</button>
+		<form:hidden path="id" />
 	</form:form>
 </div>

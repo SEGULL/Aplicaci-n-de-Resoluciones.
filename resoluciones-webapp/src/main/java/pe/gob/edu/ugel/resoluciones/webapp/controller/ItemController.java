@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,6 +38,23 @@ public class ItemController {
 		return "item/form";
 	}
 
+	@RequestMapping(value = "item/{id}", method = RequestMethod.GET)
+	public String getFormulario(@PathVariable String id, Model model) {
+		model.addAttribute("item",
+				resolucionService.IdItemResolItem(Integer.parseInt(id)));
+		return "item/form";
+	}
+
+	@RequestMapping(value = "item/{id}/items", method = RequestMethod.GET)
+	public String getItems(@PathVariable String id, Model model) {
+		model.addAttribute("item",
+				resolucionService.IdResolResolItem(Integer.parseInt(id)));
+		return "item/form";
+	}
+	
+	
+	
+	
 	@RequestMapping(value = "item/guardar", method = RequestMethod.POST)
 	public String guardar(@ModelAttribute("item") Item item,
 			Model model) {

@@ -19,6 +19,12 @@
 
 				</a>
 	</display:column>
+	
+		<display:column title="accion">
+		<a href="../item/${item.id}">Editar</a>
+		<a href="../item/${item.id}/items">Items</a>
+		</display:column>
+	
 </display:table>
 <br>
 <br>

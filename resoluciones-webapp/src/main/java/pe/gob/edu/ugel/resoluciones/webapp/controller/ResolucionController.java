@@ -38,6 +38,8 @@ public class ResolucionController {
 		return "resolucion/form";
 	}
 
+	
+	
 	@RequestMapping(value = "resolucion/{id}", method = RequestMethod.GET)
 	public String getFormulario(@PathVariable String id, Model model) {
 		model.addAttribute("resolucion",
