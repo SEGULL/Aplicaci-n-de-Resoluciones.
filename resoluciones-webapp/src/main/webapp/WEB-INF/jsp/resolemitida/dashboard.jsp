@@ -8,23 +8,13 @@
 	<display:column title="Nombre Resolucion" property="resolucion.nombre" />
 
 
-
-	<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Editar"/>
-
-				</a>
-	</display:column>
-		<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Eliminar"/>
-
-				</a>
-	</display:column>
+<display:column title="accion">
+		<a href="../itemresol/${itemResol.id}" class="btn btn-success">Editar</a>
+		<a href="../itemresol/${itemResol.id}/eliminar" class="btn btn-warning">Eliminar</a>
+		<a href="../itemresol/${itemResol.id}/eliminar" class="btn btn-warning">Ver Resolucion</a>
+</display:column>
 	
 	
 	
 </display:table>
 
-<br>
-<a class="btn btn-primary" href="../resolucion/nuevo">Agregar</a>

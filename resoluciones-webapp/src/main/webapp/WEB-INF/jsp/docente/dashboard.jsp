@@ -18,10 +18,10 @@
 	<display:column title="Nombres" property="nombres" />
 	<display:column title="D.N.I." property="dni" />
 	<display:column title="accion">
-		<a href="${docente.id}/emitir-resolucion">Emit. Resol. </a>
+		<a href="${docente.id}/emitir-resolucion" class="btn btn-success">Emit. Resol. </a>
 	</display:column>
 	<display:column title="accion">
-		<a href="#"
+		<a href="#" class="btn btn-default"
 			onclick="javascript:edit('<c:out value="${item.nombres}"></c:out>');">
 			<c:out value="Ver inf." />-${item}-
 
