@@ -3,9 +3,6 @@ package pe.gob.edu.ugel.resoluciones.core.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-import pe.gob.edu.ugel.resoluciones.core.domain.Docente;
-import pe.gob.edu.ugel.resoluciones.core.domain.Resolucion;
-
 public class ResolEmitida extends BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 2L;
@@ -13,6 +10,8 @@ public class ResolEmitida extends BaseEntity implements Serializable {
 	private String codresolucion;
 	private Date fechaemitida;
 	private String fechaemitidaS;
+
+	private Detalle detalle;
 
 	public String getCodresolucion() {
 		return codresolucion;
@@ -55,6 +54,14 @@ public class ResolEmitida extends BaseEntity implements Serializable {
 
 	public void setFechaemitidaS(String fechaemitidaS) {
 		this.fechaemitidaS = fechaemitidaS;
+	}
+
+	public Detalle getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(Detalle detalle) {
+		this.detalle = detalle;
 	}
 
 }

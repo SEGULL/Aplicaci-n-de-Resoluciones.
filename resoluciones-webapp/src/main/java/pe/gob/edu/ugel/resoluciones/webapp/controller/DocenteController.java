@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import pe.gob.edu.ugel.resoluciones.core.domain.Detalle;
 import pe.gob.edu.ugel.resoluciones.core.domain.Docente;
 import pe.gob.edu.ugel.resoluciones.core.domain.ResolEmitida;
 import pe.gob.edu.ugel.resoluciones.service.services.ResolucionServiceImpl;
@@ -60,8 +61,17 @@ public class DocenteController {
 			e.printStackTrace();
 		}
 		resolucionService.GuardarResolucionmEmitida(emision);
-		System.out.println("----------" + emision.getId() + "------------");
+
+		Detalle detalle = emision.getDetalle();
+		detalle.setResolEmitida(emision);
+		resolucionService.GuardarDetalle(detalle);
+
+		model.addAttribute("items", resolucionService.ListarItemResol(emision
+				.getResolucion().getId()));
+		model.addAttribute("docente",
+				resolucionService.IdDocenteResolEmit(Integer.parseInt(id)));
+		model.addAttribute("emision", emision);
+
 		return "docente/emision_resolucion_detalle";
 	}
-
 }

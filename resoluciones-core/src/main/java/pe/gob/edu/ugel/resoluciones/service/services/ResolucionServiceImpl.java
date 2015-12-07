@@ -48,19 +48,15 @@ public class ResolucionServiceImpl {
 	 * @param resolemitida
 	 */
 	public void GuardarItem(Item item) {
-		
+
 		if (item.getId() > 0) {
 			this.resolocionDAO.updateItem(item);
 		} else {
 			this.resolocionDAO.saveItem(item);
 		}
-		
-		
+
 	}
 
-	
-	
-	
 	/**
 	 * Borrar item
 	 * 
@@ -238,6 +234,10 @@ public class ResolucionServiceImpl {
 	 */
 	public List<Usuario> ListarUsuario() {
 		return resolocionDAO.findAllUsuario();
+	}
+
+	public List<ItemResol> ListarItemResol(Long id) {
+		return resolocionDAO.findItemsByIdResolucion(id);
 	}
 
 }

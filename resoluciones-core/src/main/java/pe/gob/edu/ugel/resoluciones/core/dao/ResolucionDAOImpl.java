@@ -288,8 +288,14 @@ public class ResolucionDAOImpl extends BaseDAOHibernate implements
 	public void updateResolucion(Resolucion resss) {
 		this.update(resss);
 	}
+
 	public void updateItem(Item item) {
 		this.update(item);
+	}
+
+	public List<ItemResol> findItemsByIdResolucion(Long id) {
+		return find(ItemResol.class, "FROM ItemResol where resolucion.id = "
+				+ id);
 	}
 
 }
