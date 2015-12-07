@@ -15,131 +15,151 @@ import pe.gob.edu.ugel.resoluciones.core.domain.Resolucion;
 import pe.gob.edu.ugel.resoluciones.core.domain.Usuario;
 
 public interface ResolucionDAO {
-	
-	//================Docente===================
+
+	// ================Docente===================
 	/**
 	 * Lista Docente
+	 * 
 	 * @param null
 	 */
 	List<Docente> findAllDocente();
-	
-	//=========Item================
+
+	// =========Item================
 	/**
 	 * Lista Item
+	 * 
 	 * @param null
 	 */
 	List<Item> findAllItem();
+
 	/**
 	 * Guardar item
+	 * 
 	 * @param resolemitida
 	 */
 	void saveItem(Item item);
+
 	/**
 	 * Borrar item
-	 * @param 
+	 * 
+	 * @param
 	 */
 	void deleteItem(Item id);
-	
-	//================Resoluciones emitidas por Dni===================
+
+	// ================Resoluciones emitidas por Dni===================
 	/**
 	 * Listar resolucionemitida
+	 * 
 	 * @param resolemitida
 	 */
 	List<ResolEmitida> FindResolucionemitida(String Dni);
-	
-	//================Resoluciones emitidas ===================
+
+	// ================Resoluciones emitidas ===================
 	/**
 	 * guardar resolucion emitida
+	 * 
 	 * @param resolemitida
 	 */
 	void saveresolucionemitida(ResolEmitida resolemitida);
-		Docente findIdDocente(int Id);
-		Resolucion findIdResolucion(int Id);
+
+	Docente findIdDocente(int Id);
+
+	Resolucion findIdResolucion(int Id);
 
 	/**
 	 * Lista resolucionemitida
+	 * 
 	 * @param null
 	 */
 	List<ResolEmitida> findAllResolEmitida();
+
 	/**
 	 * Borrar resolucionemitida
+	 * 
 	 * @param null
 	 */
-	void deleteResolucionEmitida(ResolEmitida resolemitida);	
-	//================Resoluciones ===================
+	void deleteResolucionEmitida(ResolEmitida resolemitida);
+
+	// ================Resoluciones ===================
 	/**
 	 * Lista Resolucione
+	 * 
 	 * @param null
 	 */
 	List<Resolucion> findAllResolucion();
-	
+
 	/**
 	 * Guardar resolucion
+	 * 
 	 * @param resoluciones
 	 */
-	 void saveresolucion(Resolucion res);
-	 /**
-	* borrar resolucion
-	* @param resoluciones
+	void saveresolucion(Resolucion res);
+
+	/**
+	 * borrar resolucion
+	 * 
+	 * @param resoluciones
 	 */
-	 void deleteResolucion(Resolucion resolucion);
-	//================Item_Resol ===================
-	 /**
+	void deleteResolucion(Resolucion resolucion);
+
+	// ================Item_Resol ===================
+	/**
 	 * ListaItemResol
+	 * 
 	 * @param null
 	 */
 	List<ItemResol> findAllItemResol();
+
 	/**
 	 * GuardarItemResol
+	 * 
 	 * @param null
 	 */
 	void saveItemResol(ItemResol itemresol);
-		Resolucion findIdResol(int Id);
-		Item findIdItemResol(int Id);
+
+	Resolucion findIdResol(int Id);
+
+	Item findIdItemResol(int Id);
+
 	/**
-	* borrar ItemResol
-	* @param resoluciones
-	*/
+	 * borrar ItemResol
+	 * 
+	 * @param resoluciones
+	 */
 	void deleteItemResol(ItemResol itemresol);
-	//================ Detalle ===================	
+
+	// ================ Detalle ===================
 	/**
 	 * Lista Detalle
+	 * 
 	 * @param null
 	 */
 	List<Detalle> findAllDetalle();
-	
+
 	/**
 	 * guardar Detalle
+	 * 
 	 * @param Detalle
 	 */
-	 void saveDetalle(Detalle detalle);
-	 	ResolEmitida findIdResolemitida(int Id);
+	void saveDetalle(Detalle detalle);
+
+	ResolEmitida findIdResolemitida(int Id);
+
 	/**
-	* borrar Detalle
-	* @param 
-	*/
-	 void deletedetalle(Detalle detalle);
-	//================ Usuario ===================
+	 * borrar Detalle
+	 * 
+	 * @param
+	 */
+	void deletedetalle(Detalle detalle);
+
+	// ================ Usuario ===================
 	/**
 	 * Lista usuario
+	 * 
 	 * @param null
 	 */
 	List<Usuario> findAllUsuario();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	void updateResolucion(Resolucion resss);
+
 }

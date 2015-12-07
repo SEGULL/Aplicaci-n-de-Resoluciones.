@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/include/taglibs.jsp"%>
 
 <div class="col-md-6">
-	<form:form modelAttribute="item" action="guardar">
+	<form:form modelAttribute="itemresol" action="guardar">
 		<h2>Registro de Item por resolucion</h2>
 		<div class="form-group">
 			<SELECT NAME="Item" MULTIPLE SIZE=5> 

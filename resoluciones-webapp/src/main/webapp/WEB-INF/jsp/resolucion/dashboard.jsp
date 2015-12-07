@@ -8,19 +8,9 @@
 	<display:column title="Nombre" property="nombre" />
 
 	<display:column title="accion">
-		<a href="#"
-			onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-			<c:out value="Editar" />
-
-		</a>
+		<a href="../resolucion/${resolucion.id}">Editar</a>
+		<a href="../resolucion/${resolucion.id}/items">Items</a>
 	</display:column>
-	<display:column title="accion">
-		<a href="#"
-			onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-			<c:out value="Eliminar" />
-		</a>
-	</display:column>
-z
 </display:table>
 
 <br>

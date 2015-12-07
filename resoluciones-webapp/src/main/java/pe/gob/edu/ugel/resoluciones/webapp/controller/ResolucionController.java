@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,6 +35,21 @@ public class ResolucionController {
 	@RequestMapping(value = "resolucion/nuevo", method = RequestMethod.GET)
 	public String getFormularioNuevo(Model model) {
 		model.addAttribute("resolucion", new Resolucion());
+		return "resolucion/form";
+	}
+
+	@RequestMapping(value = "resolucion/{id}", method = RequestMethod.GET)
+	public String getFormulario(@PathVariable String id, Model model) {
+		model.addAttribute("resolucion",
+				resolucionService.IdResolResolItem(Integer.parseInt(id)));
+		return "resolucion/form";
+	}
+
+	@RequestMapping(value = "resolucion/{id}/items", method = RequestMethod.GET)
+	public String getItems(@PathVariable String id, Model model) {
+		model.addAttribute("resolucion",
+				resolucionService.IdResolResolItem(Integer.parseInt(id)));
+
 		return "resolucion/form";
 	}
 
