@@ -7,24 +7,13 @@
 	<display:column title="Nombre" property="nombre" />
 	<display:column title="Tipo" property="tipo" />
 
-	<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Editar"/>
-
-				</a>
-	</display:column>
-		<display:column title="accion">
-				<a href="#" onclick="javascript:edit('<c:out value="${item.id}"></c:out>');">
-					<c:out value="Eliminar"/>
-
-				</a>
-	</display:column>
 	
 		<display:column title="accion">
 		<a href="../item/${item.id}">Editar</a>
-		<a href="../item/${item.id}/items">Items</a>
 		</display:column>
-	
+		<display:column title="accion">
+		<a href="../itemresol/nuevo">Añadir campo</a>
+		</display:column>
 </display:table>
 <br>
 <br>

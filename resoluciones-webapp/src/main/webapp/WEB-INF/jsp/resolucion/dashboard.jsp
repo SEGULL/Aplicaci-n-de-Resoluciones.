@@ -9,7 +9,8 @@
 
 	<display:column title="accion">
 		<a href="../resolucion/${resolucion.id}">Editar</a>
-		<a href="../resolucion/${resolucion.id}/items">Items</a>
+<%-- 		<a href="../item/${resolucion.id}/items">Ver Componentes de resolucion</a> --%>
+		<a href="../item/dashboard">Ver Componentes de resolucion</a>
 	</display:column>
 </display:table>
 
