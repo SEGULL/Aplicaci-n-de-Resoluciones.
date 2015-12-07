@@ -8,10 +8,9 @@
 	<display:column title="Nombre" property="nombre" />
 
 	<display:column title="accion">
-		<a href="../resolucion/${resolucion.id}">Editar</a>
-		<%-- 		<a href="../item/${resolucion.id}/items">Ver Componentes de resolucion</a> --%>&nbsp;&nbsp;&nbsp;
-		<a href="../resolucion/${resolucion.id}/items">Ver Componentes de
-			resolucion</a>
+		<a href="../resolucion/${resolucion.id}" class="btn btn-primary">Editar</a>
+		<a href="../resolucion/${resolucion.id}/items" class="btn btn-primary">Ver
+			Componentes de resolucion</a>
 	</display:column>
 </display:table>
 

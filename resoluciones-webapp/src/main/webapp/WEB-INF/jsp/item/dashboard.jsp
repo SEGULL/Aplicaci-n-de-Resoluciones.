@@ -9,10 +9,10 @@
 
 	
 		<display:column title="accion">
-		<a href="../item/${item.id}">Editar</a>
+		<a href="../item/${item.id}" class="btn btn-primary">Editar</a>
 		</display:column>
 		<display:column title="accion">
-		<a href="../itemresol/nuevo">Añadir campo</a>
+		<a href="../itemresol/nuevo"  class="btn btn-primary">Añadir campo</a>
 		</display:column>
 </display:table>
 <br>
